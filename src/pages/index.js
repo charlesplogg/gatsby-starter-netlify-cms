@@ -10,35 +10,21 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
+        <section className="hero is-info is-medium is-bold">
+          <div className="hero-body">
+            <div className="container has-text-centered">
+              <h1 className="title">
+                Find events near you
+              </h1>
+              <div className="field">
+                <div className="control has-icons-right">
+                  <input className="input is-success" type="text" placeholder="Enter a city" />
+                  <span className="icon is-small is-right">
+                    <i className="fas fa-search"></i>
+                  </span>
                 </div>
-              ))}
+              </div>
+            </div>
           </div>
         </section>
       </Layout>

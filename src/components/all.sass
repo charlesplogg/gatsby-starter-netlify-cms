@@ -7,6 +7,14 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 
+@font-face 
+  font-family: siteTitle
+  src: url(/fonts/stylish_regular.ttf)
+
+.site-title
+  font-family: siteTitle
+  font-size: 5em
+
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -38,5 +46,26 @@ $primary-invert: $kaldi-red-invert
 
 .margin-top-0
   margin-top: 0 !important
+
+.hero-body
+    background-image: url(/img/hero-background.jpg)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+    .field
+      max-width: 700px
+      margin: auto
+
+.fa-facebook-square
+  color: #3B5998
+  margin-right: 10px
+
+.fa-twitter-square
+  color: #1DA1F2
+  margin-right: 10px
+
+.fa-pinterest-square
+  color: #BD081C
 
 @import "~bulma"
